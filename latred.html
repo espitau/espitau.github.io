@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="css/milligram.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/responsive-nav.min.js"></script>
+  </head>
+  <body>
+
+    <main>
+    <header>
+      <div class="wrapper">
+        <section class="container">
+          <hr>
+          <i class="fa fa-snowflake-o"></i> <span class="red">S</span>πτ
+        </section>
+        <section class="container nav">
+          <nav class="nav-collapse">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./research.html">Publications</a></li>
+              <li><a href="./activities.html">Research activities</a></li>
+              <li><a href="./latred.html">IALatRed</a></li>
+            </ul>
+          </nav>
+          <hr>
+        </section>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <section class="container">
+        <div class="row">
+          <div class="column">
+            <h2>IALatred</h2>
+            <p align="justify">
+            The celebrated Lenstra–Lenstra–Lovász reduction algorithm (so-called 
+            LLL) has been improved in many ways through the past decades and 
+            remains one of the central method used for reducing integral lattice 
+            ba- sis. In particular, its floating-point variants—where the 
+            long-integer arith- metic required by Gram–Schmidt orthogonalization 
+            is replaced by floating- point arithmetic—are now the fastest known.  
+            This proof-of-concept presents a sound adaptive-precision version of 
+            a generalized LLL algorithm working for lattices endowed with an 
+            arbitrary scalar product, where floating-point arithmetic is 
+            replaced by Interval Arithmetic. The inherent certification property 
+            of Interval Arithmetic enables runtime detection of precision 
+            defects in numerical computations and accordingly makes it possible 
+            to run the reduction algorithms with guaranteed nearly optimal pre- 
+            cision. This algorithm aims at developing sound techniques for an 
+            algorithmic insight of the Geometry of Numbers in number fields.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div><!-- /wrapper -->
+
+    <div class="wrapper">
+      <section class="container">
+        <div class="row">
+          <div class="column">
+            <img class="img-large-circle" src="img/e6.svg" alt="">
+          </div>
+          <div class="column">
+            <h4><span class="red"><i class="fa fa-fire" 
+                                     aria-hidden="true"></i></span>
+              | <span class="red">F</span>eatures
+            </h4>
+
+            <ul>
+              <li> Lightweight and fast library for Interval Arithmetic.
+              </li>
+              <li> Implementation of several lattice redcution algorithms ( 
+                <i> LLL, Potential-LLL, BKZ</i> ) with interval arithmetic. 
+              </li>
+              <li> 
+                Can reduce lattice with arbitrary scalar product.
+              </li>
+              <li> Support early abort of reductions (using standard signal 
+                interuption <code> ctrl+c </code>
+              </li>
+            </ul>
+            <h4><span class="red"><i class="fa fa-download" 
+                                     aria-hidden="true"></i></span>
+              | <span class="red">D</span>ownload
+              </h3>
+              IALatRed requires:
+              <ul>
+                <li> <a href="https://gmplib.org">GNU MP 4.2.0</a> or higher 
+                </li>
+                <li> <a href="https://gcc.gnu.org">GCC 4.7 or higher</a>
+                </li>
+              </ul>
+          </div>
+
+        </div>
+      </section>
+    </div><!-- /wrapper -->
+
+
+    <div class="wrapper hup">
+      <section class="container">
+        <div class="row">
+          <h3><span class="red"><i class="fa fa-wrench" 
+                                   aria-hidden="true"></i></span>
+            | <span class="red">E</span>xemples
+          </h3>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li> <i>LLL</i> reduction:</br>
+                <code> latred < matrix_file </code>
+              </li>
+
+              <li> <i>Potential-LLL</i> reduction:</br>
+                <code>latred -p < matrix-file</code>
+              </li>
+
+              <li>
+                <i>LLL</i> reduction with delta set to 0.8:</br>
+                <code>latred -d 0.8 < matrix_file</code>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <ul>
+              <li>
+                <i>BKZ</i> blocksize 20:</br>
+                <code>latred -B 20 < matrix_file</code>
+              </li>
+
+              <li>
+                <i>BKZ</i> reduction blocksize 20 with LLL-delta set to 0.8, 
+                early precision defect heuristic:</br>
+                <code>latred -d 0.8 -B 20 -e < matrix_file</code>
+              </li>
+
+              <li>
+                <i>LLL</i> with external scalar product:</br>
+                <code>latred -S < lattice_file < scalprod_file</code>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+    </div>
+      </section>
+      </div><!-- /wrapper -->
+
+      <div class="wrapper grey">
+        <section class="container grey">
+          <div class="row">
+            <div class="column">
+              <p align="center">
+              This project is maintained by <a href="https://www-almasty.lip6.fr/~joux/">Antoine Joux</a> and
+              <a href="https://almasty.lip6.fr/~espitau/">Thomas Espitau</a>.
+              </p>
+              <p align="center">
+              It is supported by the European Union's H2020 Program
+              me under grant agreement number
+              <a href="https://www.openaire.eu/search/project?projectId=corda_
+              _h2020::b86fed9269ea16b43bc40c7c09d9b43c">ERC-669891</a>
+              and <a href="https://heat-project.eu">ICT-644209</a>.
+              </p>          
+            </div>
+          </div>
+        </section>
+      </div><!-- /wrapper -->
+
+    </main>
+    <script>
+var navigation = responsiveNav(".nav-collapse");
+    </script>
+  </body>
+</html>
