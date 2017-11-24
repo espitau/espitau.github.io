@@ -27,7 +27,6 @@ table td.name{
     font-variant: small-caps;
   }
 
-
 .red { 
   color: #614051; 
   font-family: 'Philosopher';
@@ -110,7 +109,6 @@ header .nav {
 }
 
 
-
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -162,3 +160,15 @@ header .nav {
     display: none;
   }
 }
+
+.particles-js-canvas-el{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+}
+#particles-js{
+	position: relative;
+	z-index: 0;
+  }
+
