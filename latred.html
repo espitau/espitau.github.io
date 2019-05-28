@@ -61,20 +61,20 @@
           <div class="column">
             <h2>IALatred</h2>
             <p align="justify">
-            The celebrated Lenstra–Lenstra–Lovász reduction algorithm (so-called 
-            LLL) has been improved in many ways through the past decades and 
-            remains one of the central method used for reducing integral lattice 
-            ba- sis. In particular, its floating-point variants—where the 
-            long-integer arith- metic required by Gram–Schmidt orthogonalization 
-            is replaced by floating- point arithmetic—are now the fastest known.  
-            This proof-of-concept presents a sound adaptive-precision version of 
-            a generalized LLL algorithm working for lattices endowed with an 
-            arbitrary scalar product, where floating-point arithmetic is 
-            replaced by Interval Arithmetic. The inherent certification property 
-            of Interval Arithmetic enables runtime detection of precision 
-            defects in numerical computations and accordingly makes it possible 
-            to run the reduction algorithms with guaranteed nearly optimal pre- 
-            cision. This algorithm aims at developing sound techniques for an 
+            The celebrated Lenstra–Lenstra–Lovász reduction algorithm (so-called
+            LLL) has been improved in many ways through the past decades and
+            remains one of the central method used for reducing integral lattice
+            ba- sis. In particular, its floating-point variants—where the
+            long-integer arith- metic required by Gram–Schmidt orthogonalization
+            is replaced by floating- point arithmetic—are now the fastest known.
+            This proof-of-concept presents a sound adaptive-precision version of
+            a generalized LLL algorithm working for lattices endowed with an
+            arbitrary scalar product, where floating-point arithmetic is
+            replaced by Interval Arithmetic. The inherent certification property
+            of Interval Arithmetic enables runtime detection of precision
+            defects in numerical computations and accordingly makes it possible
+            to run the reduction algorithms with guaranteed nearly optimal pre-
+            cision. This algorithm aims at developing sound techniques for an
             algorithmic insight of the Geometry of Numbers in number fields.
             </p>
           </div>
@@ -89,7 +89,7 @@
             <img class="img-large-circle" src="img/e6.svg" alt="">
           </div>
           <div class="column">
-            <h4><span class="red"><i class="fa fa-fire" 
+            <h4><span class="red"><i class="fa fa-fire"
                                      aria-hidden="true"></i></span>
               | <span class="red">F</span>eatures
             </h4>
@@ -97,23 +97,26 @@
             <ul>
               <li> Lightweight and fast library for Interval Arithmetic.
               </li>
-              <li> Implementation of several lattice redcution algorithms ( 
-                <i> LLL, Potential-LLL, BKZ</i> ) with interval arithmetic. 
+              <li> Implementation of several lattice redcution algorithms (
+                <i> LLL, Potential-LLL, BKZ</i> ) with interval arithmetic.
               </li>
-              <li> 
+              <li>
                 Can reduce lattice with arbitrary scalar product.
               </li>
-              <li> Support early abort of reductions (using standard signal 
+              <li> Support early abort of reductions (using standard signal
                 interuption <code> ctrl+c </code>
               </li>
             </ul>
-            <h4><span class="red"><i class="fa fa-download" 
+            <h4><span class="red"><i class="fa fa-download"
                                      aria-hidden="true"></i></span>
               | <span class="red">D</span>ownload
               </h3>
+                <li> <a href="./bin/IALatRed0.1.tar.gz">Download
+                    IALatred.tar.gz</a></li>
+
               IALatRed requires:
               <ul>
-                <li> <a href="https://gmplib.org">GNU MP 4.2.0</a> or higher 
+                <li> <a href="https://gmplib.org">GNU MP 4.2.0</a> or higher
                 </li>
                 <li> <a href="https://gcc.gnu.org">GCC 4.7 or higher</a>
                 </li>
@@ -128,7 +131,7 @@
     <div class="wrapper hup">
       <section class="container">
         <div class="row">
-          <h3><span class="red"><i class="fa fa-wrench" 
+          <h3><span class="red"><i class="fa fa-wrench"
                                    aria-hidden="true"></i></span>
             | <span class="red">E</span>xemples
           </h3>
@@ -159,7 +162,7 @@
               </li>
 
               <li>
-                <i>BKZ</i> reduction blocksize 20 with LLL-delta set to 0.8, 
+                <i>BKZ</i> reduction blocksize 20 with LLL-delta set to 0.8,
                 early precision defect heuristic:</br>
                 <code>latred -d 0.8 -B 20 -e < matrix_file</code>
               </li>
@@ -191,7 +194,7 @@
               <a href="https://www.openaire.eu/search/project?projectId=corda_
               _h2020::b86fed9269ea16b43bc40c7c09d9b43c">ERC-669891</a>
               and <a href="https://heat-project.eu">ICT-644209</a>.
-              </p>          
+              </p>
             </div>
           </div>
         </section>
