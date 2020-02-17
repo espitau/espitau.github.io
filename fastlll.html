@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Espitau :: エスピト</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    user-scalable=no" />
+    <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Philosopher" />
+    <link rel="stylesheet" href="https://espitau.github.io/assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/academicons.min.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+          <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+          <h1><strong>Thomas Espitau (エスピト) </strong> | Ph.D.
+            <!--<br/> Home | Research | Other <br/> -->
+          </h1>
+				</div>
+			</header>
+
+      <!---------------------------------------------------------------------->
+      <!--                                                                  -->
+      <!--                               Main
+      -->
+      <!--                                                                  -->
+      <!---------------------------------------------------------------------->
+      <div id="main">
+        <!-- One -->
+        <section id="one">
+          <header class="major">
+            <h1>Fast(er) lattice reduction algorithms</h1>
+          </header>
+          <blockquote>
+            This page archives the prototypes of lattice reduction algorithms
+            desccribed in the paper
+            <a href="https://espitau.github.io/bin/optimallatred.pdf">
+              Algebraic and euclidean lattices: optimal lattice
+              reduction and beyond</a>. The two proof of concepts are
+            on the one hand a blazing fast reduction algorithm for
+            algebraic lattices over cyclotomic fields and on the other hand a
+            quasi-optimal reduction for Euclidean lattices.
+          </blockquote>
+        </section>
+
+        <section id="four">
+          <h2>Reduction of algebraic lattices over cyclotomic fields</h2>
+          <p><span class="image right"><img
+            src="images/thumbs/tower.jpg" alt="Algebraic lattice" /></span>
+          We introduce a framework generalizing lattice reduction algorithms to module
+          lattices in order to practically and efficiently solve the
+          \(\gamma\)-Hermite Module-SVP problem over arbitrary cyclotomic fields. The core
+          idea is to exploit the structure of the subfields for designing a recursive
+          strategy of reduction in the tower of fields we are working in. Besides, we
+          demonstrate how to leverage the inherent symplectic geometry existing such
+          fields to provide a significant speed-up of the reduction for rank two
+          modules. As a byproduct, we also generalize to all cyclotomic fields and
+          provide speedups for many previous number theoretical algorithms, in
+          particular to the rounding in the so-called Log-unit lattice.  Quantitatively,
+          we show that a module of rank 2 over a cyclotomic field of degree $n$ can be
+          heuristically reduced within approximation factor
+          \(2^{\tilde{\textrm{O}}(n)}\) in time
+          \(\tilde{\textrm{O}}(n^2B)\), where \(B\) is the bitlength of the
+          entries. For \(B\) large
+          enough, this complexity shrinks to \(\tilde{\textrm{O}}(n^{\log_2 3}B)\). This last
+          result is particularly striking as it goes below the estimate of
+          \(n^2B\) swaps given by the classical analysis of the LLL algorithm
+          using the decrease of the potential.
+          </p>
+
+          <div class="row">
+            <div class="col-6 col-12-xsmall">
+              <h5>Features</h5>
+              <ul>
+                <li>Fully Parallel</li>
+                <li>Fastest available reduction for Cyclotomic lattices  </li>
+                <li>Requires latest version of GP.</li>
+                <li>Generator of NTRU instances included in the file</li>
+              </ul>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <a href="https://espitau.github.io/bin/cyclolll.zip" class="button
+              primary">Download protoype here</a>
+            </div>
+
+          </div>
+              <h5> Content </h5>
+<pre><code>-- File reduction.gp reduces a NTRU-like lattice,
+    produced in the main function, at the bottom of the file
+    (procedure exec()). It showcases the main reduction and
+    the symplectic symmetries exploitation.
+
+-- ideaux.gp is a fast implementation of the Gentry-Szydlo algorithm.
+</code></pre>
+          <hr />
+          <h2>Quasi-optimal reduction for Euclidean lattices</h2>
+          <p><span class="image left"><img
+            src="images/thumbs/hexagonal_lattice.jpg" alt="Hexagonal Lattice" /></span>
+          The LLL algorithm introduced by Lenstra, Lenstra and Lov&agrave;sz in
+          1982 is a polynomial-time algorithm for reducing \(d\)-dimensional
+          lattice with exponential \(2^d\) approximation factor. Currently,
+          the most efficient version of the LLL algorithm has a running time
+          in \(d^4\cdot B^{1+\textrm{o}{1}}\) by Neumaier and Stehl&eacute; where
+          \(B\) is the bitlength of the entries, but it has never been
+          implemented.
+
+          The <b>OptLLL</b> algorithm here an heuristic, parallel and
+          superfast versions of LLL and we propose an implementation. First
+          of all, we show that by carefully reducing the needed precision
+          during the recursion steps, we can get a LLL reduction in time
+          \(\tilde{O}(d^\omega\cdot B)\), i.e. almost a constant number of
+          matrix multiplications, where \(\omega\) is the exponent of matrix
+          multiplication. We then show that we can reduce structured
+          lattices, so-called knapsack lattices in time
+          \(\tilde{O}(d^{\omega-1}\cdot B)\), which is useful for finding
+          linear relations between real numbers or finding the minimal
+          polynomial of algebraic numbers.
+          </p>
+
+          <div class="row">
+            <div class="col-6 col-12-xsmall">
+              <h5>Features</h5>
+              <ul>
+                <li>Fully Parallel</li>
+                <li>Faster than state-of-the-art LLL implementation</li>
+                <li>Estimated complexity in  \(\tilde{O}(d^\omega\cdot B)\)</li>
+                <li>Requires MPFR, GMP and FFTW.</li>
+                <li>Compatible with fpLLL input format </li>
+              </ul>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <a href="https://espitau.github.io/bin/optlll.zip" class="button
+              primary">Download protoype here</a>
+            </div>
+          </div>
+              <h5> Installation </h5>
+              <pre><code>./configure --enable-openmp
+              CPPFLAGS=-I/opt/OpenBLAS/include  LDFLAGS=-L/opt/OpenBLAS/lib
+  make
+  ## Launch with
+  src/lllfr
+              </code></pre>
+        </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Thomas Espitau</li><li>Background: 羊蹄山, Yōteisan
+              taken from Annupuri range, 2020 </a></li>
+					</ul>
+				</div>
+        </section>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
