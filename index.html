@@ -24,6 +24,8 @@
     <link rel="apple-touch-icon" sizes="https://espitau.github.io/144x144" href="apple-touch-icon-144x144.png">
     <meta name="msapplication-TileImage" content="https://espitau.github.io/favicon-144.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="is-preload">
 
@@ -69,14 +71,23 @@
           </p>
           <div class="row">
             <div class="col-6 col-12-xsmall">
+              <h5>Geometry of numbers and lattices</h5>
+              <ul>
+                <li>Theta function of lattices</li>
+                <li>Convex geometry</li>
+                <li>Discrete geometry</li>
+              </ul>
+            </div>
+            <div class="col-6 col-12-xsmall">
               <h5>(Algorithmic) Number theory</h5>
               <ul>
-                <li>Geometry of numbers</li>
-                <li>Reduction of vector bundles over curves</li>
+                <li>Reduction of vector bundles over arithmetic curves curves</li>
                 <li>Class group computation</li>
                 <li>Effective Arakelov theory</li>
               </ul>
             </div>
+          </div>
+          <div class="row">
             <div class="col-6 col-12-xsmall">
               <h5>Cryptography</h5>
               <ul>
@@ -85,14 +96,14 @@
                 <li>Secure and efficient implementation</li>
               </ul>
             </div>
-            <!-- <div class="col-6 col-12-xsmall"> -->
-            <!--   <h5>Program verification</h5> -->
-            <!--   <ul> -->
-            <!--     <li>Lattice-based cryptography</li> -->
-            <!--     <li>Statistical learning and cryptanalysis</li> -->
-            <!--     <li>Secure and efficient implementation</li> -->
-            <!--   </ul> -->
-            <!-- </div> -->
+            <div class="col-6 col-12-xsmall">
+              <h5>Program verification</h5>
+              <ul>
+                <li>Verification of probabilistic programs</li>
+                <li>Coupling-based techniques</li>
+                <li>Relational methods</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -101,13 +112,30 @@
             <h3>Recent Work</h3>
             <div class="row">
               <article class="col-6 col-12-xsmall work-item">
+                <a href="bin/cospace.pdf" class="image fit thumb"><img
+                  src="images/thumbs/cospace.png" alt="" /></a>
+                <h3>The nearest-colattice algorithm: time-approximation
+                  tradeoff for approx-CVP</h3>
+                <p>
+                  We exhibit a hierarchy of polynomial time algorithms solving
+                  approximate variants of the Closest Vector Problem.  Our
+                  contributions is on the one hand a heuristic algorithm
+                  achieving the same distance as HSVP algorithms, and on
+                  the other hand a proven reduction from approximating
+                  the closest vector with a
+                  factor \(\approx n^{\frac32}\beta^{\frac{3n}{2\beta}}\)
+                  to the Shortest Vector Problem in dimension
+                  \(\beta\).
+                </p>
+              </article>
+              <article class="col-6 col-12-xsmall work-item">
                 <a href="bin/optimallatred.pdf" class="image fit thumb"><img
                   src="images/thumbs/algebraic_lattices.png" alt="" /></a>
                 <h3>Algebraic and euclidean lattices: optimal lattice
                   reduction and beyond</h3>
                 <p>We introduce a framework for polynomial time reduction of
                 lattices over number fields, leveraging their recursive and
-                symplectic structures. <a
+                symplectic structures.</br> <a
                 href="https://espitau.github.io/fastlll.html" class="button
                ">See implementation page</a></p>
               </article>
