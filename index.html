@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1,
     user-scalable=no" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Philosopher" />
     <link rel="stylesheet" href="https://espitau.github.io/assets/css/main.css" />
@@ -41,7 +42,8 @@
 
       <!---------------------------------------------------------------------->
       <!--                                                                  -->
-      <!--                               Main                               -->
+      <!--                               Main
+      -->
       <!--                                                                  -->
       <!---------------------------------------------------------------------->
       <div id="main">
@@ -52,16 +54,17 @@
           </header>
           <blockquote>
             I'm Thomas Espitau - エスピト - currently Postdoc at <a
-              href="https://www.ntt.co.jp/sc/index_e.html">NTT Secure
-              Platform Laboratories</a>, in Tokyo.
-            I pursued my Ph.D. in algorithmic number theory at Sorbonne
-            University in Paris, advised by prof.  <a
-              href="https://www-almasty.lip6.fr/~joux/"> Antoine Joux</a> and
-            prof.  <a href="http://www.di.ens.fr/~fouque/index.html">
-              Pierre-Alain Fouque</a>. I love maths, computer science, skiing
-            and surfing.  I'm also an enthusiastic <a
-              href="https://en.wikipedia.org/wiki/Kendo"> Kenshi </a>  and <a
-              href="https://en.wikipedia.org/wiki/Go_(game)"> Go </a> player.
+                  href="https://www.ntt.co.jp/sc/index_e.html">NTT Secure
+                  Platform Laboratories</a>, in Tokyo.  I pursued my Ph.D. in
+                algorithmic number theory at Sorbonne University in Paris,
+                advised by prof.  <a
+                  href="https://www-almasty.lip6.fr/~joux/"> Antoine Joux</a>
+                and prof. <a href="http://www.di.ens.fr/~fouque/index.html">
+                  Pierre-Alain Fouque</a>. I love maths, computer science,
+                skiing and surfing.  I'm also an enthusiastic
+                <a href="https://en.wikipedia.org/wiki/Kendo"> Kenshi </a>  and
+                <a href="https://en.wikipedia.org/wiki/Go_(game)"> Go </a>
+                player.
           </blockquote>
         </section>
 
@@ -109,7 +112,11 @@
 
         <!-- Two -->
           <section id="three">
-            <h3>Recent Work</h3>
+            <h3>Most Recent Work  &nbsp &nbsp &nbsp &nbsp &nbsp
+              <a
+                   href="https://scholar.google.fr/citations?user=0VJo-L8AAAAJ&hl=fr"
+                  class="button primary small">All Publications</a>
+            </h3>
             <div class="row">
               <article class="col-6 col-12-xsmall work-item">
                 <a href="bin/cospace.pdf" class="image fit thumb"><img
@@ -135,9 +142,19 @@
                   reduction and beyond</h3>
                 <p>We introduce a framework for polynomial time reduction of
                 lattices over number fields, leveraging their recursive and
-                symplectic structures.</br> <a
-                href="https://espitau.github.io/fastlll.html" class="button
-               ">See implementation page</a></p>
+                symplectic structures.</br>
+               <a href="https://espitau.github.io/fastlll.html"
+                class="button ">Implementation page</a>
+               <a href="#headerPopup" id="headerVideoLink" target="_blank"
+                class="button">Talk at Simons Institute</a>
+              <div id="headerPopup" class="mfp-hide embed-responsive
+                embed-responsive-21by9">
+              <iframe class="embed-responsive-item" width="854" height="480"
+                src="https://www.youtube.com/embed/x8cYYaN_da4?autoplay=1"
+                frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            </div>
+                </p>
               </article>
               <article class="col-6 col-12-xsmall work-item">
                 <a href="bin/TFHE.pdf" class="image fit thumb"><img
@@ -147,17 +164,6 @@
                 <p>We propose a novel hybrid attack against binary LWE and
                 apply it to refine the security estimate of the fully
                 homomorphic encryption scheme TFHE.</p>
-              </article>
-              <article class="col-6 col-12-xsmall work-item">
-                <a href="bin/Galactics.pdf" class="image fit thumb"><img
-                  src="images/thumbs/galactics.png" alt="" /></a>
-                <h3>GALACTICS: Gaussian Sampling for Lattice-Based
-                  Constant-Time Implementation of Cryptographic Signatures,
-                  Revisited </h3>
-                <p>In this paper, we propose a constant-time implementation of
-                the BLISS lattice-based signature scheme, using in particular
-                a generic approximation method using lattice reduction in
-                Sobolev norm.</p>
               </article>
               <article class="col-6 col-12-xsmall work-item">
                 <a href="bin/Star-Lifting.pdf"j class="image fit thumb"><img
@@ -187,11 +193,6 @@
                 feugiat.</p> -->
               <!-- </article> -->
             </div>
-            <ul class="actions">
-              <li><a
-                  href="https://scholar.google.fr/citations?user=0VJo-L8AAAAJ&hl=fr"
-                  class="button">All Publications</a></li>
-            </ul>
           </section>
 
         <!-- Three -->
@@ -211,7 +212,7 @@
                   <li>
                     <h3 class="icon solid fa-mobile-alt"><span
                         class="label">Phone</span></h3>
-                    000-000-0000
+                    070-494-45622
                   </li>
                   <li>
                     <h3 class="icon solid fa-envelope"><span
@@ -580,6 +581,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+      <script>
+        $( document ).ready(function() {
+          $('#headerVideoLink').magnificPopup({
+            type:'inline',
+            midClick: true   });
+        });
+
+      </script>
+
 
 	</body>
 </html>
