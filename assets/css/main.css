@@ -2403,6 +2403,14 @@ input, select, textarea {
 			padding: 0.75em 0.75em;
 		}
 
+    table td{
+      font-size: 75%;
+    }
+    table td.name{
+      font-size: 100%;
+      font-variant: small-caps;
+    }
+
 		table th {
 			color: #787878;
 			font-size: 0.9em;
